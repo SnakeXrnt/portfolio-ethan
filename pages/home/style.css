@@ -14,12 +14,14 @@
     left: 37%;   
 }
 
+
 .backroundimg {
     width: 40%;
     height: auto;
     position: absolute;
-    bottom: 5%;
-    right: 50px;   
+    bottom: 10%;
+    right: 50px; 
+      
 }
 
 #text-container {
