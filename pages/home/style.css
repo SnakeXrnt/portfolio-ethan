@@ -130,6 +130,35 @@ body {
     
 }
 
+.projects{
+  display: flex;
+  
+}
+
+.about {
+  display: flex;
+  min-width: 90vw;
+  min-height: 100vh;
+  flex-direction: column;
+  padding : 60px;
+}
+
+.projects {
+  display: flex;
+  min-width: 90vw;
+  min-height: 100vh;
+  flex-direction: column;
+  padding : 60px;
+}
+
+
+.heading-aboutme {
+  font-size: 40px;
+}
+
+.heading-projects {
+  font-size: 40px;
+}
 
 
 @media screen and (max-width: 768px) {
