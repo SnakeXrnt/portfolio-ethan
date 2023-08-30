@@ -52,4 +52,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     updateGreeting();
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetSection = document.querySelector(link.getAttribute('href'));
+        sections.forEach(section => section.classList.remove('visible'));
+        targetSection.classList.add('visible');
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
   });

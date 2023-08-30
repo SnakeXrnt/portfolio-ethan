@@ -1,96 +1,155 @@
-.circle1 {
-    width: 20%;
-    height: auto;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;   
-}
-
-.circle2 {
-    width: 10%;
-    height: auto;
-    position: absolute;
-    bottom: 70%;
-    left: 37%;   
+body {
+  margin: 0; /* Reset default margin */
+  display: flex; /* Use flex layout */
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Spread content along the horizontal axis */
+  min-height: 100%; /* Ensure the body takes at least the full viewport height */
+  min-width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  flex-direction: column;
+  background-color: #f0f0f0; /* Set a background color */
 }
 
 
-.backroundimg {
-    width: 40%;
-    height: auto;
-    position: absolute;
-    bottom: 10%;
-    right: 50px; 
-      
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* width: 100%; */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(54, 54, 54, 0.5); /* Transparent white */
+  text-decoration: none;
+  margin: 0 20px;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.7); /* Lighter transparent white on hover */
+}
+
+.nav-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000000; /* Blue color for the underline */
+  position: absolute;
+  bottom: -10px; /* Position the underline below the link */
+  left: 0;
+}
+
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #f0f0f0;
+}
+
+.side-by-side {
+  display: flex; /* Use flex layout for the side-by-side elements */
+  align-items: center; /* Vertically center both elements */
+  justify-content: space-between; /* Spread elements along the horizontal axis */
+  max-width: 100%;
+  width: 100vw; /* Set the width to 100% of the parent container */
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-object {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start from the top */
+  padding: 60px;
+}
+
+.backroundimg{
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px;
 }
 
 #text-container {
-    font-size: 70px;
-    font-family: 'Roboto Mono', monospace;
-    white-space: nowrap;
-    overflow: hidden;
-    position: absolute;
-    bottom: 45%;
-    left: 6%;
+  font-size: 70px;
+  font-family: 'Roboto Mono', monospace;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #text-container2 {
-    font-size: 45px;
-    font-family: 'Roboto Mono', monospace;
-    white-space: nowrap;
-    overflow: hidden;
-    position: absolute;
-    bottom: 55%;
-    left: 6%; 
+  font-size: 45px;
+  font-family: 'Roboto Mono', monospace;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .button-container {
-    position: absolute;
-    bottom: 38%;
-    left: 16%;
-    transform: translateX(-50%);
-  }
+  display: flex;
+  align-items: center;
+}
 
 .button1 {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .button2 {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.button2 {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+.backroundimg {
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: end;
+
+    
+}
+
+
+
+@media screen and (max-width: 768px) {
   .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Center the navbar horizontally */
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     background-color: transparent;
+    width: 90vw;
     padding: 10px;
   }
 
   .nav-link {
-    font-size: 18px;
-    font-family: 'Roboto Mono', monospace;
-    color: rgba(54, 54, 54, 0.5); /* Transparent white */
+    margin: 0;
+    color: rgba(0, 0, 0, 0.5); /* Transparent gray */
+    padding: 5px;
     text-decoration: none;
-    margin: 0 20px;
-    position: relative;
-  }
-
-  .nav-link:hover {
-    color: rgba(0, 0, 0, 0.7); /* Lighter transparent white on hover */
   }
 
   .nav-link.active::after {
@@ -100,101 +159,37 @@
     height: 3px;
     background-color: #000000; /* Blue color for the underline */
     position: absolute;
-    bottom: -10px; /* Position the underline below the link */
+    bottom: -5px; /* Position the underline slightly above the link */
     left: 0;
   }
 
-@media screen and (max-width: 768px) {
-    .circle1 {
-      width: 0%;
-      left: 0;
-      bottom: 0;
-    }
+  .side-by-side {
 
-    .circle2 {
-      width: 0%;
-      left: 60%;
-      bottom: 37%;
-    }
-
-    .backroundimg {
-      width: 80%;
-      left: 50%;
-      top: 10%;
-      transform: translateX(-50%);
-    }
-
-      #text-container {
-        text-align: center; /* Center the text horizontally */
-        font-size: 24px;
-        bottom: 20%;
-        left: 50%;
-        transform: translateX(-50%); /* Center the element horizontally */
-      }
-    
-      #text-container2 {
-        text-align: center; /* Center the text horizontally */
-        font-size: 14px;
-        bottom: 25%;
-        left: 50%;
-        transform: translateX(-50%); /* Center the element horizontally */
-      }
-    .button-container {
-        position: absolute;
-        bottom: 16%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    
-    .button1 {
-        margin: 2.5px;
-        padding: 5px 10px;
-        font-size: 8px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-    
-      .button2 {
-        margin: 2.5px;
-        padding: 5px 10px;
-        font-size: 8px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .navbar {
-        position: fixed;
-        bottom: 0;
-        left: 50%; /* Center the navbar horizontally */
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: space-around;
-        background-color: transparent;
-        width: 100%;
-        padding: 10px;
-      }
-    
-      .nav-link {
-        margin: 0;
-        color: rgba(0, 0, 0, 0.5); /* Transparent gray */
-        padding: 5px;
-        text-decoration: none;
-      }
-    
-      .nav-link.active::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #000000; /* Blue color for the underline */
-        position: absolute;
-        bottom: -5px; /* Position the underline slightly above the link */
-        left: 0;
-      }
+    flex-direction: column-reverse;
   }
+
+  .backroundimg {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .left-object{
+    display: flex;
+    align-items: center;
+    flex: 2;
+  }
+
+  #text-container {
+    font-size: 30px;
+  }
+
+  #text-container2 {
+    font-size: 20px;
+  }
+
+  .button1,
+  .button2 {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,244 @@
+.circle1 {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;   
+}
+
+.circle2 {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    bottom: 70%;
+    left: 37%;   
+}
+
+
+.backroundimg {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+    right: 50px; 
+      
+}
+
+
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 100%; */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(54, 54, 54, 0.5); /* Transparent white */
+    text-decoration: none;
+    margin: 0 20px;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: rgba(0, 0, 0, 0.7); /* Lighter transparent white on hover */
+  }
+
+  .nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000000; /* Blue color for the underline */
+    position: absolute;
+    bottom: -10px; /* Position the underline below the link */
+    left: 0;
+  }
+
+  .section {
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+    
+  }
+
+  .visible {
+    transform: translateY(0); /* Default visible position */
+  }
+
+  .hidden {
+    transform: translateY(100%); /* Slide down to hide */
+  }
+
+
+
+@media screen and (max-width: 768px) {
+    .circle1 {
+      width: 0%;
+      left: 0;
+      bottom: 0;
+    }
+
+    .circle2 {
+      width: 0%;
+      left: 60%;
+      bottom: 37%;
+    }
+
+    .backroundimg {
+      width: 80%;
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
+    }
+
+      #text-container {
+        text-align: center; /* Center the text horizontally */
+        font-size: 24px;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%); /* Center the element horizontally */
+      }
+    
+      #text-container2 {
+        text-align: center; /* Center the text horizontally */
+        font-size: 14px;
+        bottom: 25%;
+        left: 50%;
+        transform: translateX(-50%); /* Center the element horizontally */
+      }
+    .button-container {
+        position: absolute;
+        bottom: 16%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    
+    .button1 {
+        margin: 2.5px;
+        padding: 5px 10px;
+        font-size: 8px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+      .button2 {
+        margin: 2.5px;
+        padding: 5px 10px;
+        font-size: 8px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .navbar {
+        position: fixed;
+        bottom: 0;
+        left: 50%; /* Center the navbar horizontally */
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-around;
+        background-color: transparent;
+        width: 100%;
+        padding: 10px;
+      }
+    
+      .nav-link {
+        margin: 0;
+        color: rgba(0, 0, 0, 0.5); /* Transparent gray */
+        padding: 5px;
+        text-decoration: none;
+      }
+    
+      .nav-link.active::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #000000; /* Blue color for the underline */
+        position: absolute;
+        bottom: -5px; /* Position the underline slightly above the link */
+        left: 0;
+      }
+  }
+
+/* Your existing CSS rules... */
+
+#text-container {
+  font-size: 70px;
+  font-family: 'Roboto Mono', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  bottom: 35%;
+  left: 6%;
+}
+
+#text-container2 {
+  font-size: 45px;
+  font-family: 'Roboto Mono', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  bottom: 25%;
+  left: 6%;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button1,
+.button2 {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.side-object {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  position: fixed; /* Keep the sidebar fixed */
+  top: 50%; /* Center vertically */
+  left: 0;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* On larger screens, align to the left */
+@media screen and (min-width: 769px) {
+  .side-object {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* On mobile screens, center the content */
+@media screen and (max-width: 768px) {
+  .side-object {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+/* Your existing CSS rules... */
