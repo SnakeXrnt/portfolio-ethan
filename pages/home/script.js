@@ -68,4 +68,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     });
+
+    // Get all skill elements
+  const skills = document.querySelectorAll('.skill');
+
+  // Function to animate skills bar on scroll
+  function animateSkills() {
+    skills.forEach(skill => {
+      const progressBar = skill.querySelector('.skill-progress');
+      const percentage = skill.querySelector('.skill-percentage').textContent;
+      progressBar.style.width = percentage; // Set the width to the percentage value
+    });
+  }
+
+  // Listen for scroll events and trigger animation
+  window.addEventListener('scroll', animateSkills);
+
   });
