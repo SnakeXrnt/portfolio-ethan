@@ -8,6 +8,8 @@ body {
   font-family: 'Roboto Mono', monospace;
   flex-direction: column;
   background-color: #f0f0f0; /* Set a background color */
+  overflow-x: hidden;
+  overflow-y: auto
 }
 
 
@@ -162,6 +164,11 @@ body {
 
 
 @media screen and (max-width: 768px) {
+
+  body, html {
+    overflow-x: hidden;
+  }
+  
   .navbar {
     position: fixed;
     bottom: 0;
