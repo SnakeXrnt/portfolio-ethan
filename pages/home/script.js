@@ -84,4 +84,54 @@ document.addEventListener("DOMContentLoaded", function () {
   // Listen for scroll events and trigger animation
   window.addEventListener('scroll', animateSkills);
 
+    // Add this JavaScript code to your script.js file
+  document.addEventListener("scroll", function () {
+    // Define the scroll position at which the sections should appear
+    const scrollPosition = window.innerHeight / 2;
+
+    // Get references to the sections you want to animate
+    const projectsSection = document.getElementById("projects");
+    const resumeSection = document.querySelector(".resumepart");
+
+    // Check if the user has scrolled to the project list section
+    if (window.scrollY > projectsSection.offsetTop - scrollPosition) {
+      projectsSection.classList.add("visible");
+    }
+
+    // Check if the user has scrolled to the biodata (resume) section
+    if (window.scrollY > resumeSection.offsetTop - scrollPosition) {
+      resumeSection.classList.add("visible");
+    }
+  });
+
+  // Function to update the active navbar link based on the current section
+  function updateActiveNavLink() {
+    console.log("scroll detected")
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    sections.forEach((section) => {
+      const sectionId = section.id;
+      const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+      
+      // Check if the section is in the viewport
+      const rect = section.getBoundingClientRect();
+      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      
+      // Add or remove the "active" class based on visibility
+      if (isVisible) {
+        navLink.classList.add('active');
+      } else {
+        navLink.classList.remove('active');
+      }
+    });
+  }
+
+  // Listen for scroll events and update the active navbar link
+  window.addEventListener('scroll', updateActiveNavLink);
+  window.addEventListener('resize', updateActiveNavLink);
+  window.addEventListener('load', updateActiveNavLink); // Handle initial state
+
+
+
   });
