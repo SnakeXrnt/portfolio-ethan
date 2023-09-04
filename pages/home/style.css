@@ -264,6 +264,42 @@ body {
   filter: blur(0); /* Remove blur on click */
 }
 
+.project-list-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f0f0f0; /* Background color for the footer */
+  padding: 20px;
+}
+
+.github-icon {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;
+}
+
+.text {
+  margin-top: 10px; /* Adjust spacing between icon and text */
+}
+
+.github-button {
+  margin-top: 20px; /* Adjust spacing between text and button */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9; /* Change color on hover */
+}
 
 
 @media screen and (max-width: 768px) {
@@ -282,6 +318,7 @@ body {
     background-color: transparent;
     width: 90vw;
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   .nav-link {
@@ -350,3 +387,4 @@ body {
 
 
 }
+
