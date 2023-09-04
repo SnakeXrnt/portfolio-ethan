@@ -89,14 +89,17 @@ body {
 }
 
 #text-container {
-  font-size: 70px;
+  font-size: 4vw;
   font-family: 'Roboto Mono', monospace;
   white-space: nowrap;
   overflow: hidden;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 #text-container2 {
-  font-size: 45px;
+  font-size: 2vw;
   font-family: 'Roboto Mono', monospace;
   white-space: nowrap;
   overflow: hidden;
