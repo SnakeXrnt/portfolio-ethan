@@ -1,3 +1,10 @@
+/**
+ * @author Ethan Bastian
+ * @email ethanbastian11@gmail.com
+ * @create date 2023-08-31 08:19:29
+ */
+
+
 body {
   margin: 0; /* Reset default margin */
   display: flex; /* Use flex layout */
@@ -152,6 +159,12 @@ body {
   min-height: 100vh;
   flex-direction: column;
   padding : 60px;
+  background: #ffffff
+}
+
+.headerproject {
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -206,6 +219,51 @@ body {
   color: #555555;
 }
 
+.footer {
+  background: #000000;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  width: 300px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s, filter 0.3s; /* Add transitions for animation */
+  color: #333; /* Text color */
+}
+
+.project:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+  filter: blur(4px); /* Apply blur effect on hover */
+}
+
+.project h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.project p {
+  margin: 0;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project:active {
+  transform: scale(1); /* Reset the scale on click */
+  filter: blur(0); /* Remove blur on click */
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -216,7 +274,7 @@ body {
 
   .navbar {
     position: fixed;
-    bottom: 0;
+    top: 0; /* Position the navbar at the top */
     left: 50%; /* Center the navbar horizontally */
     transform: translateX(-50%);
     display: flex;
@@ -273,4 +331,18 @@ body {
     padding: 5px 10px;
     font-size: 12px;
   }
+
+  .project-list {
+    padding-top: 60px; /* Increase padding to create space at the top */
+    padding-bottom: 20px; /* Restore or adjust the bottom padding */
+  }
+
+  
+  .headerproject {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+  }
+
+
 }
