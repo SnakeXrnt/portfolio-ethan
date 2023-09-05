@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("Caught you inspecting 0-0")
     const textContainer = document.getElementById("text-container");
     const texts = ["a Developer", "a Coder", "an Innovator", "a UI Designer"]; // Change the dynamic parts
     let currentIndex = 0;
@@ -105,32 +106,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Function to update the active navbar link based on the current section
+  // Function to update the active navbar link based on the current section
+  // Function to update the active navbar link based on the current section
   function updateActiveNavLink() {
-    console.log("scroll detected")
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     sections.forEach((section) => {
       const sectionId = section.id;
       const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-      
-      // Check if the section is in the viewport
+
+      // Calculate the scroll position at which the sections should appear
+      const scrollPosition = window.innerHeight / 2;
       const rect = section.getBoundingClientRect();
-      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      
-      // Add or remove the "active" class based on visibility
+      const isVisible = rect.top <= scrollPosition && rect.bottom >= scrollPosition;
+
+      // Add or remove the "visible" class based on visibility
       if (isVisible) {
+        section.classList.add('visible');
         navLink.classList.add('active');
+        // Animate the line
+        const line = navLink.querySelector('::after');
+        if (line) {
+          line.style.width = '100%';
+        }
       } else {
+        section.classList.remove('visible');
         navLink.classList.remove('active');
+        // Reset the line width
+        const line = navLink.querySelector('::after');
+        if (line) {
+          line.style.width = '0';
+        }
       }
     });
   }
 
+
   // Listen for scroll events and update the active navbar link
   window.addEventListener('scroll', updateActiveNavLink);
   window.addEventListener('resize', updateActiveNavLink);
-  window.addEventListener('load', updateActiveNavLink); // Handle initial state
+  window.addEventListener('load', updateActiveNavLink); 
 
 
 
