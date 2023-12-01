@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Caught you inspecting 0-0")
     const textContainer = document.getElementById("text-container");
-    const texts = ["a Developer", "a Coder", "an Innovator", "a UI Designer"]; // Change the dynamic parts
+    const texts = ["Code Explorer in Training", "Aspiring Developer, Continous Learner", "Coding Novice on a Learning Odyssey", "Embarking on the Coding Journey", "Learning the ABCs of Code", "In the Lab: Experimenting with Code", "Code Apprentice, Always Learning", "Syntax Seeker and Code Explorer", "Unleashing the Coder Within", "Code Crafting on the Learning Path"]; // Change the dynamic parts
     let currentIndex = 0;
     let isDeleting = false;
     let textIndex = 0;
@@ -147,6 +147,32 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('scroll', updateActiveNavLink);
   window.addEventListener('resize', updateActiveNavLink);
   window.addEventListener('load', updateActiveNavLink); 
+
+  function updateDateTime() {
+    // Get the current date and time
+    const currentDate = new Date();
+    
+    // Format the date and time as desired
+    const formattedDateTime = currentDate.toLocaleString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: false
+    });
+
+    // Update the content of the span element
+    document.getElementById('dynamic-text3').textContent = formattedDateTime;
+}
+
+// Call the function to update date and time immediately
+updateDateTime();
+
+// Optionally, you can update the date and time periodically (e.g., every second)
+setInterval(updateDateTime, 1000);
 
 
 

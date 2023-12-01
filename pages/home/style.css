@@ -98,14 +98,21 @@ body {
   padding: 40px;
 }
 
+.backroundimg {
+  width: 30vw !important;
+  height: 30vw !important;
+}
+
 #text-container {
   font-size: 4vw;
   font-family: 'Roboto Mono', monospace;
-  white-space: nowrap;
+  white-space: wrap;
   overflow: hidden;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: wrap;
   text-overflow: ellipsis;
+  max-width: 50vw;
+  min-height: 12vw;
 }
 
 #text-container2 {
@@ -427,28 +434,47 @@ li {
   }
 
   .backroundimg {
-    width: 80%;
-    margin-top: 10px;
+    margin-top: 5vh;
+    width: auto !important;
+    height: 50vh !important;
+    padding: 3px !important;
   }
 
   .left-object{
     display: flex;
     align-items: center;
     flex: 2;
+    padding: 0px !important;
   }
 
   #text-container {
-    font-size: 30px;
+    font-size: 25px;
+    min-height: 12.5vh;
+    min-width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   #text-container2 {
     font-size: 20px;
+    min-height: max-content;
+    min-width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #dynamic-text3 {
+    text-align: center;
   }
 
   .button1,
   .button2 {
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 7px 12px;
+    font-size: 17px;
   }
 
   .project-list {
