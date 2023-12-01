@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Caught you inspecting 0-0")
     const textContainer = document.getElementById("text-container");
-    const texts = ["Code Explorer in Training", "Aspiring Developer, Continous Learner", "Coding Novice on a Learning Odyssey", "Embarking on the Coding Journey", "Learning the ABCs of Code", "In the Lab: Experimenting with Code", "Code Apprentice, Always Learning", "Syntax Seeker and Code Explorer", "Unleashing the Coder Within", "Code Crafting on the Learning Path"]; // Change the dynamic parts
+    const texts = ["I am a developer, turning lines of code into functional magic.", "I am a learner, soaking up knowledge like a sponge in the coding sea.", "I am a UX/UI designer, orchestrating user experiences with a touch of creativity.", "I am a developer, sculpting logic and functionality with the language of bits and bytes.", "I am a learner, navigating the vast landscape of information in pursuit of mastery.", "I am a UX/UI designer, harmonizing aesthetics and functionality for delightful interactions.", "I am a developer, weaving algorithms into the fabric of digital innovation.", "I am a learner, embracing the challenge of continuous growth in the coding realm.", "I am a UX/UI designer, architecting interfaces that seamlessly connect users and technology.", "I am a developer, constructing virtual realities with the keystrokes of possibility."]; // Change the dynamic parts
     let currentIndex = 0;
     let isDeleting = false;
     let textIndex = 0;
   
     function animateText() {
       const currentText = texts[currentIndex];
-      const prefix = "I'm ";
+      const prefix = "";
       const dynamicPart = currentText.slice(0, textIndex);
   
       textContainer.textContent = prefix + dynamicPart;
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   
-    setInterval(animateText, 150); // Adjust the speed as needed
+    setInterval(animateText, 80); // Adjust the speed as needed
 
     const textContainer2 = document.getElementById("text-container2");
     const dynamicText2 = document.getElementById("dynamic-text2");
