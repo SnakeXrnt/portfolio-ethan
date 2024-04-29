@@ -22,14 +22,21 @@ body {
 
 .navbar {
   position: fixed;
-  top: 0;
+  display: flex;
+  justify-content: center;
+  /* top: 0;
   left: 50%;
-  transform: translateX(-50%);
-  /* width: 100%; */
+  transform: translateX(-50%); */
+  width: 100vw;
   background-color: rgba(255, 255, 255, 0.8);
   color: rgb(0, 0, 0);
   padding: 10px;
   z-index: 1;
+  flex-wrap: wrap;
+}
+
+.navbar-mobile {
+  display: none;
 }
 
 .nav-link {
@@ -168,7 +175,7 @@ body {
 .about {
   display: flex;
   min-width: 90vw;
-  min-height: 100vh;
+  height: max-content;
   flex-direction: column;
   padding : 60px;
   background: #f0f0f0
@@ -218,7 +225,7 @@ body {
 
 /* Style for skill bar container */
 .skill-bar {
-  width: 100%;
+  width: 90%;
   height: 10px;
   background-color: #f0f0f0;
   border-radius: 5px;
@@ -340,6 +347,11 @@ button:hover {
   justify-content: space-between;
 }
 
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+}
+
 .left, .right {
   flex: 1;
   padding: 10px;
@@ -400,7 +412,7 @@ li {
 
   .navbar {
     position: fixed;
-    top: 0; /* Position the navbar at the top */
+    bottom: 0; /* Position the navbar at the top */
     left: 50%; /* Center the navbar horizontally */
     transform: translateX(-50%);
     display: flex;
@@ -507,3 +519,32 @@ li {
 
 }
 
+  @media screen and (max-width: 767px) {
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding: 0px;
+    }
+
+    .navbar-desktop {
+      display: none;
+    }
+
+    .navbar-mobile {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .nav-link {
+      width: auto;
+    }
+
+    .navbar-mobile a {
+      padding: 1px;
+      color: #000000;
+      width: auto;
+    }
+  }
